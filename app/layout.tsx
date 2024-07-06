@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
+import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { siteConfig } from '@/config/site';
 import Image from 'next/image';
 
@@ -95,6 +96,7 @@ export default function RootLayout({
               </div>
             </main>
           )}
+          <TailwindIndicator />
         </ThemeProvider>
       </body>
     </html>
