@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google';
 import { siteConfig } from '@/config/site';
 import { ThemeProvider } from '@/components/theme-provider';
 import { TailwindIndicator } from '@/components/tailwind-indicator';
-import { TempLandingUI } from '@/components/temp/landing-ui';
 
 import './globals.css';
 
@@ -78,7 +77,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {process.env.NEXT_DEV_MODE !== 'PROD' ? children : <TempLandingUI />}
+          {children}
           <TailwindIndicator />
         </ThemeProvider>
       </body>
