@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     creator: '@folklore69_',
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: siteConfig.ogImage,
+    shortcut: siteConfig.ogImage,
+    apple: siteConfig.ogImage,
   },
   // manifest: `${siteConfig.url}/site.webmanifest`,
 };
