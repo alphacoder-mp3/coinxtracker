@@ -2,10 +2,11 @@ export const siteConfig = {
   name: 'coinXtracker',
   url: 'https://coinxtracker.com',
   ogImage: 'https://coinxtracker.com/images/coinXtracker.png',
-  description: 'Regular crypto insights and data',
+  description:
+    'Regular crypto insights and data. A simple yet powerful analysis tool. Analyze and bet on your favorite coin.',
   links: {
-    twitter: 'https://x.com/folklore69_',
-    github: 'https://github.com/alphacoder-mp3/coinxtracker',
+    twitter: 'https://x.com/CoinXtracker',
+    github: 'https://github.com/coinXtracker/cxt-frontend',
   },
   keywords: [
     'Crypto',
@@ -18,6 +19,7 @@ export const siteConfig = {
     'Server Components',
     'Radix UI',
     'block chain',
+    'Betting',
   ],
 };
 
