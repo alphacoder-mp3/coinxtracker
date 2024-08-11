@@ -2,6 +2,7 @@ export const siteConfig = {
   name: 'coinXtracker',
   url: 'https://coinxtracker.com',
   ogImage: 'https://coinxtracker.com/images/coinXtracker.png',
+  siteLogo: 'https://coinxtracker.com/images/coinXtracker.jpg',
   description:
     'Regular crypto insights and data. A simple yet powerful analysis tool. Analyze and bet on your favorite coin.',
   links: {
