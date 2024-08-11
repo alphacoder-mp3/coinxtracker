@@ -41,7 +41,7 @@ export function MainNav() {
             pathname === '/docs' ? 'text-foreground' : 'text-foreground/60'
           )}
         >
-          Docs
+          Home
         </Link>
         <Link
           href="/docs/components"
@@ -53,7 +53,7 @@ export function MainNav() {
               : 'text-foreground/60'
           )}
         >
-          Components
+          Exchanges
         </Link>
         <Link
           href="/blocks"
@@ -64,7 +64,7 @@ export function MainNav() {
               : 'text-foreground/60'
           )}
         >
-          Blocks
+          Journal
         </Link>
         <Link
           href="/charts"
@@ -76,7 +76,7 @@ export function MainNav() {
               : 'text-foreground/60'
           )}
         >
-          Charts
+          Open Interest
         </Link>
         <Link
           href="/themes"
@@ -87,7 +87,7 @@ export function MainNav() {
               : 'text-foreground/60'
           )}
         >
-          Themes
+          Options
         </Link>
         <Link
           href="/examples"
@@ -98,7 +98,62 @@ export function MainNav() {
               : 'text-foreground/60'
           )}
         >
-          Examples
+          Funding Rate
+        </Link>
+        <Link
+          href="/examples"
+          className={cn(
+            'transition-colors hover:text-foreground/80',
+            pathname?.startsWith('/examples')
+              ? 'text-foreground'
+              : 'text-foreground/60'
+          )}
+        >
+          Liquidation
+        </Link>
+        <Link
+          href="/examples"
+          className={cn(
+            'transition-colors hover:text-foreground/80',
+            pathname?.startsWith('/examples')
+              ? 'text-foreground'
+              : 'text-foreground/60'
+          )}
+        >
+          Long/Short
+        </Link>
+        <Link
+          href="/examples"
+          className={cn(
+            'transition-colors hover:text-foreground/80',
+            pathname?.startsWith('/examples')
+              ? 'text-foreground'
+              : 'text-foreground/60'
+          )}
+        >
+          ETFs
+        </Link>
+        <Link
+          href="/examples"
+          className={cn(
+            'transition-colors hover:text-foreground/80',
+            pathname?.startsWith('/examples')
+              ? 'text-foreground'
+              : 'text-foreground/60'
+          )}
+        >
+          Data
+        </Link>
+        <Link
+          href="/examples"
+          className={cn(
+            'transition-colors hover:text-foreground/80',
+            pathname?.startsWith('/examples')
+              ? 'text-foreground'
+              : 'text-foreground/60'
+          )}
+        >
+          Supercharts
         </Link>
       </nav>
     </div>
