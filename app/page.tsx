@@ -1,3 +1,4 @@
+import { CardTimeline } from '@/components/card-timeline';
 import { SiteHeader } from '@/components/header/site-header';
 import { TopHeader } from '@/components/header/top-header';
 
@@ -6,6 +7,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col p-2">
       <TopHeader />
       <SiteHeader />
+      <CardTimeline />
     </main>
   );
 }
