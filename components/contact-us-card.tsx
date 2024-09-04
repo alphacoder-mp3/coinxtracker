@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 export function ContactUsCard() {
   return (
-    <Card className="w-[450px] mt-10  shadow-xl rounded-xl border  hover:shadow-4xl transition-all duration-300">
+    <Card className=" w-[300px] sm:w-[450px] mt-10  shadow-xl rounded-xl border  hover:shadow-4xl transition-all duration-300">
       <CardHeader className="bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 p-4 rounded-t-xl ">
         <CardTitle className="text-xl font-bold">Contact Us</CardTitle>
         <CardDescription className="text-sm dark:text-gray-300 text-gray-600">
