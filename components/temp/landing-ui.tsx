@@ -1,11 +1,15 @@
 import Image from 'next/image';
 import { TypedWords } from '@/components/temp/typed-words';
+import { Spotlight } from '@/components/ui/spot-light';
 
 export const TempLandingUI = () => {
   return (
     <main className="flex h-svh justify-center items-center">
-      <div className="h-full w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex items-center justify-center">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+      <div className="h-full w-full dark:bg-black bg-white  relative flex items-center justify-center">
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="#6d28d9"
+        />
         <Image
           className="h-auto w-auto"
           src="/images/coinXtracker.jpg"
