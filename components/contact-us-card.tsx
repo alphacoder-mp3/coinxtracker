@@ -2,7 +2,7 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
+  //   CardFooter,
   CardHeader,
   CardTitle,
 } from '@/components/ui/card';
@@ -55,32 +55,26 @@ export function ContactUsCard() {
             <div className="hover:underline">YouTube</div>
           </Link>
         </div>
-        <p className="text-center bg-stone-600 rounded-md px-4 text-neutral-400">
-          Mail us at:{' '}
-          <a href={`mailto:${siteConfig.email}`} className=" hover:underline">
-            {siteConfig.email}
-          </a>
-        </p>
-        <p className="text-center bg-stone-600 rounded-md px-4 text-neutral-400">
-          Chat with us on Telegram:{' '}
-          <a
-            href={siteConfig.TGChat}
-            target="_blank"
-            className="hover:underline"
+
+        <div className="rounded-md px-4 text-blue-400">
+          <Link href={siteConfig.links.TGChat} target="_blank">
+            Chat with us on Telegram
+          </Link>
+        </div>
+        <div className="rounded-md px-4 text-blue-400 ">
+          <Link href={siteConfig.links.TGChannel} target="_blank">
+            Join our Telegram channel
+          </Link>
+        </div>
+        <div className="rounded-md px-4 text-gray-400 ">
+          <Link
+            href={`mailto:${siteConfig.email}`}
+            className=" hover:underline text-blue-400"
           >
-            {siteConfig.TGChat}
-          </a>
-        </p>
-        <p className="text-center bg-stone-600 rounded-md px-4 text-neutral-400 ">
-          Join our Telegram channel:{' '}
-          <a
-            href={siteConfig.TGChannel}
-            target="_blank"
-            className=" hover:underline"
-          >
-            {siteConfig.TGChannel}
-          </a>
-        </p>
+            {/* {siteConfig.email} */}
+            Write us through an email
+          </Link>
+        </div>
       </CardContent>
       {/* <CardFooter className="flex justify-between p-4 rounded-b-xl"></CardFooter> */}
     </Card>
