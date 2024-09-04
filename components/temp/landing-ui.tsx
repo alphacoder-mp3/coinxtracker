@@ -1,15 +1,16 @@
 import Image from 'next/image';
 import { TypedWords } from '@/components/temp/typed-words';
 import { Spotlight } from '@/components/ui/spot-light';
+import { ContactUsCard } from '@/components/contact-us-card';
 
 export const LandingPage = () => {
   return (
-    <main className="flex h-svh justify-center items-center">
-      <div className="h-full w-full dark:bg-black bg-white  relative flex items-center justify-center">
-        <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
-          fill="#6d28d9"
-        />
+    <main className="flex h-svh w-full justify-center items-center flex-col">
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="#6d28d9"
+      />
+      <div className="dark:bg-black bg-white flex items-center justify-center">
         <Image
           className="h-auto w-auto"
           src="/images/coinXtracker.jpg"
@@ -20,6 +21,7 @@ export const LandingPage = () => {
         />
         <TypedWords />
       </div>
+      <ContactUsCard />
     </main>
   );
 };
