@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { siteConfig } from '@/config/site';
-import { Icons } from './icons';
+import { Icons } from '@/components/icons';
 import { Linkedin, YoutubeIcon } from 'lucide-react';
 import Link from 'next/link';
 
