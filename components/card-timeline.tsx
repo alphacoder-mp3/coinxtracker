@@ -27,13 +27,30 @@ export const CardTimeline = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const cardVariants = {
+    initial: {
+      opacity: 0,
+      x: -100,
+      rotateY: -90,
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+      rotateY: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.68, -0.55, 0.27, 1.55], // Custom cubic-bezier curve for a bouncy effect
+      },
+    },
+  };
+
   return (
     <section className="container flex justify-center items-center mt-6 gap-20">
       <motion.div
         key={BTCdata[currentBTCIndex].id}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        variants={cardVariants}
+        initial="initial"
+        animate="animate"
       >
         <Card>
           <CardHeader>
@@ -53,9 +70,10 @@ export const CardTimeline = () => {
 
       <motion.div
         key={SOLData[currentSOLIndex].id}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
+        variants={cardVariants}
+        initial="initial"
+        animate="animate"
+        transition={{ delay: 0.1 }}
       >
         <Card>
           <CardHeader>
@@ -75,9 +93,10 @@ export const CardTimeline = () => {
 
       <motion.div
         key={ETHData[currentETHIndex].id}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
+        variants={cardVariants}
+        initial="initial"
+        animate="animate"
+        transition={{ delay: 0.2 }}
       >
         <Card>
           <CardHeader>
