@@ -5,9 +5,14 @@ export const siteConfig = {
   siteLogo: 'https://coinxtracker.com/images/coinXtracker.jpg',
   description:
     'Regular crypto insights and data. A simple yet powerful analysis tool. Analyze and bet on your favorite coin.',
+  email: 'coinxtracker@gmail.com',
+  TGChat: '@coinXtrackerGrp',
+  TGChannel: '@coinXtrackerTG',
   links: {
-    twitter: 'https://x.com/CoinXtracker',
-    github: 'https://github.com/coinXtracker/cxt-frontend',
+    x: 'https://x.com/CoinXtracker',
+    github: 'https://github.com/coinXtracker/',
+    linkedin: 'https://www.linkedin.com/company/coinxtracker',
+    youtube: 'https://www.youtube.com/@coinxtracker',
   },
   keywords: [
     'Crypto',

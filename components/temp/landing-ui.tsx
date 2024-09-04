@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { TypedWords } from '@/components/temp/typed-words';
 import { Spotlight } from '@/components/ui/spot-light';
 
-export const TempLandingUI = () => {
+export const LandingPage = () => {
   return (
     <main className="flex h-svh justify-center items-center">
       <div className="h-full w-full dark:bg-black bg-white  relative flex items-center justify-center">
