@@ -6,9 +6,11 @@ import React, { useRef, useState, useEffect } from 'react';
 export const BackgroundBeamsWithCollision = ({
   children,
   className,
+  classNameforBeam,
 }: {
   children: React.ReactNode;
   className?: string;
+  classNameforBeam?: string;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const parentRef = useRef<HTMLDivElement>(null);
@@ -81,6 +83,7 @@ export const BackgroundBeamsWithCollision = ({
           beamOptions={beam}
           containerRef={containerRef}
           parentRef={parentRef}
+          classNameforBeam={classNameforBeam}
         />
       ))}
 
@@ -113,8 +116,9 @@ const CollisionMechanism = React.forwardRef<
       delay?: number;
       repeatDelay?: number;
     };
+    classNameforBeam?: string;
   }
->(({ parentRef, containerRef, beamOptions = {} }, ref) => {
+>(({ parentRef, containerRef, beamOptions = {}, classNameforBeam }, ref) => {
   const beamRef = useRef<HTMLDivElement>(null);
   const [collision, setCollision] = useState<{
     detected: boolean;
@@ -158,7 +162,7 @@ const CollisionMechanism = React.forwardRef<
     const animationInterval = setInterval(checkCollision, 50);
 
     return () => clearInterval(animationInterval);
-  }, [cycleCollisionDetected, containerRef]);
+  }, [cycleCollisionDetected, containerRef, parentRef]);
 
   useEffect(() => {
     if (collision.detected && collision.coordinates) {
@@ -201,7 +205,8 @@ const CollisionMechanism = React.forwardRef<
         }}
         className={cn(
           'absolute left-0 top-20 m-auto h-14 w-px rounded-full bg-gradient-to-t from-indigo-500 via-purple-500 to-transparent',
-          beamOptions.className
+          beamOptions.className,
+          classNameforBeam
         )}
       />
       <AnimatePresence>
