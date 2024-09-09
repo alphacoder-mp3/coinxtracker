@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { TypedWords } from '@/components/temp/typed-words';
 import { Spotlight } from '@/components/ui/spot-light';
 import { ContactUsCard } from '@/components/contact-us-card';
-import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
 
 export const LandingPage = () => {
   return (
