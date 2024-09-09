@@ -2,7 +2,7 @@ import { TopHeaderConnectButton } from '@/components/header/th-connect-button';
 
 export async function TopHeader() {
   return (
-    <section className="container max-w-screen-2xl flex justify-between items-center text-xs">
+    <section className="container max-w-screen-2xl flex justify-between items-center text-xs mb-2">
       <div className="flex justify-between gap-8">
         <div className="flex items-center gap-2">
           <div>24h Volume</div>

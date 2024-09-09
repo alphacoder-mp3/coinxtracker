@@ -6,7 +6,6 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { LandingPage } from '@/components/temp/landing-ui';
 import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
-import { Footer } from '@/components/footer/Footer';
 
 import './globals.css';
 
@@ -80,9 +79,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <BackgroundBeamsWithCollision className="min-h-svh">
+          <BackgroundBeamsWithCollision
+            className="min-h-svh"
+            classNameforBeam="dark:block hidden"
+          >
             {process.env.NEXT_DEV_MODE !== 'PROD' ? children : <LandingPage />}
-            {process.env.NEXT_DEV_MODE !== 'PROD' && <Footer />}
           </BackgroundBeamsWithCollision>
           <TailwindIndicator />
         </ThemeProvider>
