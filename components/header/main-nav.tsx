@@ -29,114 +29,70 @@ export function MainNav() {
           Home
         </Link>
         <Link
-          href="/exchanges"
+          href="/signals"
           className={cn(
             'transition-colors hover:text-foreground/80',
-            pathname?.startsWith('/exchanges')
+            pathname?.startsWith('/signals')
               ? 'text-foreground'
               : 'text-foreground/60'
           )}
         >
-          Exchanges
+          Signals
         </Link>
         <Link
-          href="/journal"
+          href="/bets"
           className={cn(
             'transition-colors hover:text-foreground/80',
-            pathname?.startsWith('/journal')
+            pathname?.startsWith('/bets')
               ? 'text-foreground'
               : 'text-foreground/60'
           )}
         >
-          Journal
+          Bets
         </Link>
         <Link
-          href="/openinterest"
+          href="/liquidations"
           className={cn(
             'transition-colors hover:text-foreground/80',
-            pathname?.startsWith('/openinterest')
+            pathname?.startsWith('/Liquidations')
               ? 'text-foreground'
               : 'text-foreground/60'
           )}
         >
-          Open Interest
+          Liquidations
         </Link>
         <Link
-          href="/options"
+          href="/blogs"
           className={cn(
             'transition-colors hover:text-foreground/80',
-            pathname?.startsWith('/options')
+            pathname?.startsWith('/blogs')
               ? 'text-foreground'
               : 'text-foreground/60'
           )}
         >
-          Options
+          Blogs
         </Link>
         <Link
-          href="/fundingrate"
+          href="/contact-us"
           className={cn(
             'transition-colors hover:text-foreground/80',
-            pathname?.startsWith('/fundingrate')
+            pathname?.startsWith('/contact-us')
               ? 'text-foreground'
               : 'text-foreground/60'
           )}
         >
-          Funding Rate
+          Contact Us
         </Link>
         <Link
-          href="/liquidation"
+          href="/career"
           className={cn(
             'transition-colors hover:text-foreground/80',
-            pathname?.startsWith('/liquidation')
+            pathname?.startsWith('/career')
               ? 'text-foreground'
               : 'text-foreground/60'
           )}
         >
-          Liquidation
-        </Link>
-        <Link
-          href="/longshort"
-          className={cn(
-            'transition-colors hover:text-foreground/80',
-            pathname?.startsWith('/longshort')
-              ? 'text-foreground'
-              : 'text-foreground/60'
-          )}
-        >
-          Long/Short
-        </Link>
-        <Link
-          href="/etfs"
-          className={cn(
-            'transition-colors hover:text-foreground/80',
-            pathname?.startsWith('/etfs')
-              ? 'text-foreground'
-              : 'text-foreground/60'
-          )}
-        >
-          ETFs
-        </Link>
-        <Link
-          href="/data"
-          className={cn(
-            'transition-colors hover:text-foreground/80',
-            pathname?.startsWith('/data')
-              ? 'text-foreground'
-              : 'text-foreground/60'
-          )}
-        >
-          Data
-        </Link>
-        <Link
-          href="/supercharts"
-          className={cn(
-            'transition-colors hover:text-foreground/80',
-            pathname?.startsWith('/supercharts')
-              ? 'text-foreground'
-              : 'text-foreground/60'
-          )}
-        >
-          Supercharts
+          Career
         </Link>
       </nav>
     </div>
