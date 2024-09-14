@@ -1,75 +1,101 @@
 import { siteConfig } from '@/config/site';
-import { Icons } from '@/components/icons';
-import { Linkedin, YoutubeIcon } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="absolute bottom-0 w-full mt-10  shadow-xl rounded-xl border  hover:shadow-4xl transition-all duration-300 px-10">
-      {/* <div className="bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 p-4 rounded-t-xl "> */}
-      <div className="rounded-t-xl ">
-        <div className="text-xl font-bold">Contact Us</div>
-        <div className="text-sm dark:text-gray-300 text-gray-600">
-          Connect with us on our social handles
-        </div>
-      </div>
-      <div className=" space-y-4">
-        <div className="flex items-center gap-4">
-          <Link
-            className="flex items-center space-x-2"
-            href={siteConfig.links.github}
-            target="_blank"
-          >
-            <Icons.gitHub className="w-6 h-6" />
-            <div className="hover:underline">GitHub</div>
-          </Link>
-          <Link
-            href={siteConfig.links.linkedin}
-            target="_blank"
-            className="flex items-center space-x-2"
-          >
-            <Linkedin className="w-6 h-6" />
-            <div className="hover:underline">LinkedIn</div>
-          </Link>
-          <Link
-            href={siteConfig.links.x}
-            target="_blank"
-            className="flex items-center space-x-2"
-          >
-            <Icons.twitter className="h-5 w-5 fill-current" />
-            <div className="hover:underline">Twitter</div>
-          </Link>
-          <Link
-            href={siteConfig.links.youtube}
-            target="_blank"
-            className="flex items-center space-x-2"
-          >
-            <YoutubeIcon className="h-6 w-6" />
-            <div className="hover:underline">YouTube</div>
-          </Link>
+    <footer className="absolute bottom-0 w-full mt-10 border-t py-6 px-8 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white shadow-lg">
+      <div className="container mx-auto flex flex-col md:flex-row items-start md:items-center gap-24">
+        <div className="flex items-center space-x-4 flex-col space-y-20">
+          <Image
+            src={siteConfig.siteLogo}
+            height={300}
+            width={300}
+            alt="COINXTRACKER LOGO"
+            className="h-12 w-auto rounded-md"
+          />
+          <p className="text-sm">
+            &copy; 2024 CoinXTracker, all rights reserved
+          </p>
         </div>
 
-        <div className="rounded-md px-4 text-blue-400">
-          <Link href={siteConfig.links.TGChat} target="_blank">
-            Chat with us on Telegram
-          </Link>
-        </div>
-        <div className="rounded-md px-4 text-blue-400 ">
-          <Link href={siteConfig.links.TGChannel} target="_blank">
-            Join our Telegram channel
-          </Link>
-        </div>
-        <div className="rounded-md px-4 text-gray-400 ">
-          <Link
-            href={`mailto:${siteConfig.email}`}
-            className=" hover:underline text-blue-400"
-          >
-            {/* {siteConfig.email} */}
-            Write us through an email
-          </Link>
+        <div className="flex flex-wrap gap-10 text-sm md:text-base">
+          <section className="flex flex-col space-y-2">
+            <h4 className="font-semibold text-lg">About</h4>
+            <Link href="/about" className="hover:underline">
+              About Us
+            </Link>
+            <Link href="/contact" className="hover:underline">
+              Contact Us
+            </Link>
+            <Link href="/disclaimer" className="hover:underline">
+              Disclaimer
+            </Link>
+            <Link href="/terms" className="hover:underline">
+              Terms of Use
+            </Link>
+            <Link href="/privacy" className="hover:underline">
+              Privacy Policy
+            </Link>
+          </section>
+
+          <section className="flex flex-col space-y-2">
+            <h4 className="font-semibold text-lg">Products</h4>
+            <Link href="/products/app" className="hover:underline">
+              Crypto APP
+            </Link>
+            <Link href="/products/api" className="hover:underline">
+              Crypto API
+            </Link>
+            <Link href="/products/chart" className="hover:underline">
+              Crypto Chart
+            </Link>
+            <Link href="/learning" className="hover:underline">
+              Learning Center
+            </Link>
+          </section>
+
+          <section className="flex flex-col space-y-2">
+            <h4 className="font-semibold text-lg">Donations</h4>
+            <span>
+              BTC:{' '}
+              <Link href="/donate/btc" className="hover:underline">
+                Donate
+              </Link>
+            </span>
+            <span>
+              ETH:{' '}
+              <Link href="/donate/eth" className="hover:underline">
+                Donate
+              </Link>
+            </span>
+            <span>
+              USDT:{' '}
+              <Link href="/donate/usdt" className="hover:underline">
+                Donate
+              </Link>
+            </span>
+          </section>
+
+          <section className="flex flex-col space-y-2">
+            <h4 className="font-semibold text-lg">Community</h4>
+            <Link
+              href="https://twitter.com/CoinXTracker"
+              target="_blank"
+              className="hover:underline"
+            >
+              Twitter
+            </Link>
+            <Link
+              href="https://t.me/CoinXTracker"
+              target="_blank"
+              className="hover:underline"
+            >
+              Telegram
+            </Link>
+          </section>
         </div>
       </div>
-      {/* <CardFooter className="flex justify-between p-4 rounded-b-xl"></CardFooter> */}
     </footer>
   );
 }
