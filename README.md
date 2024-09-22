@@ -65,19 +65,24 @@ npm run build
 
 yarn build
 
-Deployment
+### Deployment
+
 You can deploy the app using platforms like Vercel, Netlify, or any other hosting service that supports Next.js.
 
-Production URL
+### Production URL
+
 Check out the live version of CoinXTracker: https://www.coinxtracker.com/
 
-Contributing
+### Contributing
+
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
-License
+### License
+
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-Acknowledgements
+### Acknowledgements
+
 Next.js
 Tailwind CSS
 TypeScript
@@ -86,4 +91,4 @@ View
 ShadCN
 Happy tracking! 🚀
 
-Feel free to customize this template further to fit your project's specific needs. Let me know if there's anything else you'd like to add!
+### Feel free to customize this template further to fit your project's specific needs. Let me know if there's anything else you'd like to add!
