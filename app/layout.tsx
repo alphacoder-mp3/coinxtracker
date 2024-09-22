@@ -7,6 +7,9 @@ import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { LandingPage } from '@/components/temp/landing-ui';
 import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
 
+import { headers } from 'next/headers'; // added
+import ContextProvider from '@/context';
+
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -69,6 +72,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cookies = headers().get('cookie');
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
@@ -79,13 +83,19 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <BackgroundBeamsWithCollision
-            className="min-h-svh"
-            classNameforBeam="dark:block hidden"
-          >
-            {process.env.NEXT_DEV_MODE !== 'PROD' ? children : <LandingPage />}
-          </BackgroundBeamsWithCollision>
-          <TailwindIndicator />
+          <ContextProvider cookies={cookies}>
+            <BackgroundBeamsWithCollision
+              className="min-h-svh"
+              classNameforBeam="dark:block hidden"
+            >
+              {process.env.NEXT_DEV_MODE !== 'PROD' ? (
+                children
+              ) : (
+                <LandingPage />
+              )}
+            </BackgroundBeamsWithCollision>
+            <TailwindIndicator />
+          </ContextProvider>
         </ThemeProvider>
       </body>
     </html>
