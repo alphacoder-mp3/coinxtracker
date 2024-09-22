@@ -32,7 +32,7 @@ Make sure you have the following installed:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/coinxtracker.git
+   git clone https://github.com/coinXtracker/cxt-frontend.git
    ```
 
 Navigate to the project directory:
