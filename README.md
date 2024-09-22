@@ -68,6 +68,9 @@ yarn build
 Deployment
 You can deploy the app using platforms like Vercel, Netlify, or any other hosting service that supports Next.js.
 
+Production URL
+Check out the live version of CoinXTracker: https://www.coinxtracker.com/
+
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
