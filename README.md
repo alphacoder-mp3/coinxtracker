@@ -38,7 +38,8 @@ Make sure you have the following installed:
 Navigate to the project directory:
 cd coinxtracker
 
-Install dependencies:
+### Install dependencies:
+
 npm install
 
 # or
