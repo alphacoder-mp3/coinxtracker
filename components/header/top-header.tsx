@@ -1,4 +1,5 @@
 import { TopHeaderConnectButton } from '@/components/header/th-connect-button';
+import { WalletInfo } from '@/components/wallet-info';
 
 export async function TopHeader() {
   return (
@@ -24,7 +25,8 @@ export async function TopHeader() {
           <div className="text-indigo-500">49.22%/50.78%</div>
         </div>
       </div>
-      <TopHeaderConnectButton />
+      {/* <TopHeaderConnectButton /> */}
+      <WalletInfo />
     </section>
   );
 }
