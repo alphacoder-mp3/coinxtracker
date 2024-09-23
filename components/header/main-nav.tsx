@@ -84,7 +84,7 @@ export function MainNav() {
           Contact Us
         </Link>
         <Link
-          href="/career"
+          href="/careers"
           className={cn(
             'transition-colors hover:text-foreground/80',
             pathname?.startsWith('/career')
@@ -92,7 +92,7 @@ export function MainNav() {
               : 'text-foreground/60'
           )}
         >
-          Career
+          Careers
         </Link>
       </nav>
     </div>
