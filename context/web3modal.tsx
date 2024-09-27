@@ -2,7 +2,8 @@
 
 import { createAppKit } from '@reown/appkit/react';
 import { EthersAdapter } from '@reown/appkit-adapter-ethers';
-import { mainnet, arbitrum } from '@reown/appkit/networks';
+import { sepolia, baseSepolia } from '@reown/appkit/networks'; // for testnet use this
+// import { mainnet, arbitrum } from '@reown/appkit/networks'; // for mainnet use this
 
 // 1. Get projectId at https://cloud.reown.com
 const projectId = process.env.NEXT_PUBLIC_PROJECT_ID as string;
@@ -22,7 +23,8 @@ const metadata = {
 createAppKit({
   adapters: [ethersAdapter],
   metadata: metadata,
-  networks: [mainnet, arbitrum],
+  networks: [sepolia, baseSepolia], // Changed to testnet networks
+  // networks: [mainnet, arbitrum], // for mainnet we can use this
   projectId,
   features: {
     analytics: true, // Optional - defaults to your Cloud configuration
