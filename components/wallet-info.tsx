@@ -38,7 +38,9 @@ export const WalletInfo: React.FC = () => {
     if (ethereum) {
       try {
         // This will prompt MetaMask if not connected
-        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+        const accounts = await ethereum.request({
+          method: 'eth_requestAccounts',
+        });
         if (accounts.length > 0) {
           const provider = new BrowserProvider(ethereum);
           const signer = await provider.getSigner();
@@ -48,7 +50,10 @@ export const WalletInfo: React.FC = () => {
 
           setAddress(address);
           setBalance(ethers.formatEther(balance));
-          setNetwork(networkNames[network.chainId.toString()] || `Unknown Network (Chain ID: ${network.chainId})`);
+          setNetwork(
+            networkNames[network.chainId.toString()] ||
+              `Unknown Network (Chain ID: ${network.chainId})`
+          );
           setError(null);
           setIsConnected(true);
         } else {
@@ -97,8 +102,7 @@ export const WalletInfo: React.FC = () => {
   }, [disconnectWallet]);
 
   return (
-    <div className="p-4 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-2">
-      <h2 className="text-xl font-bold text-gray-900">Wallet Information</h2>
+    <div className="max-w-sm rounded-xl shadow-md">
       {error && <p className="text-red-500">{error}</p>}
       {isConnected ? (
         <>
@@ -113,7 +117,7 @@ export const WalletInfo: React.FC = () => {
           </p>
           <button
             onClick={disconnectWallet}
-            className="mt-3 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+            className="px-4 py-2  text-sm font-medium rounded-md bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
           >
             Disconnect Wallet
           </button>
@@ -121,7 +125,7 @@ export const WalletInfo: React.FC = () => {
       ) : (
         <button
           onClick={connectWallet}
-          className="mt-3 px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="px-4 py-2 text-sm font-medium rounded-md bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
           Connect Wallet
         </button>

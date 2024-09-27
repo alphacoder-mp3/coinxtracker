@@ -1,4 +1,4 @@
-import { TopHeaderConnectButton } from '@/components/header/th-connect-button';
+// import { TopHeaderConnectButton } from '@/components/header/th-connect-button';
 import { WalletInfo } from '@/components/wallet-info';
 
 export async function TopHeader() {

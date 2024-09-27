@@ -8,7 +8,6 @@ import { LandingPage } from '@/components/temp/landing-ui';
 import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
 
 import { headers } from 'next/headers'; // added
-import ContextProvider from '@/context';
 
 import './globals.css';
 
@@ -83,19 +82,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ContextProvider cookies={cookies}>
-            <BackgroundBeamsWithCollision
-              className="min-h-svh"
-              classNameforBeam="dark:block hidden"
-            >
-              {process.env.NEXT_DEV_MODE !== 'PROD' ? (
-                children
-              ) : (
-                <LandingPage />
-              )}
-            </BackgroundBeamsWithCollision>
-            <TailwindIndicator />
-          </ContextProvider>
+          <BackgroundBeamsWithCollision
+            className="min-h-svh"
+            classNameforBeam="dark:block hidden"
+          >
+            {process.env.NEXT_DEV_MODE !== 'PROD' ? children : <LandingPage />}
+          </BackgroundBeamsWithCollision>
+          <TailwindIndicator />
         </ThemeProvider>
       </body>
     </html>
