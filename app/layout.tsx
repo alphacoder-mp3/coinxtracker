@@ -8,7 +8,8 @@ import { LandingPage } from '@/components/temp/landing-ui';
 import { BackgroundBeamsWithCollision } from '@/components/ui/background-beams-with-collision';
 
 import { headers } from 'next/headers'; // added
-import ContextProvider from '@/context';
+
+import { AppKitProvider } from '@/context/web3modal';
 
 import './globals.css';
 
@@ -83,7 +84,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <ContextProvider cookies={cookies}>
+          <AppKitProvider>
             <BackgroundBeamsWithCollision
               className="min-h-svh"
               classNameforBeam="dark:block hidden"
@@ -95,7 +96,7 @@ export default function RootLayout({
               )}
             </BackgroundBeamsWithCollision>
             <TailwindIndicator />
-          </ContextProvider>
+          </AppKitProvider>
         </ThemeProvider>
       </body>
     </html>

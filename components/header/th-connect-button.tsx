@@ -8,5 +8,5 @@ export const TopHeaderConnectButton = () => {
   //     Connect
   //   </Button>
   // );
-  return <w3m-button />;
+  return <w3m-button size={'sm'} />;
 };
