@@ -3,7 +3,7 @@ import { CardTimeline } from '@/components/card-timeline';
 import { SiteHeader } from '@/components/header/site-header';
 import { TopHeader } from '@/components/header/top-header';
 import { Separator } from '@/components/ui/separator';
-import { Footer } from '@/components/footer/Footer';
+import { Footer } from '@/components/footer/footer';
 
 export default function Home() {
   return (
